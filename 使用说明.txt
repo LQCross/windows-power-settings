@@ -1,0 +1,517 @@
+
+文件说明：
+1. windows-power-settings.ps1 - 主 PowerShell 脚本
+2. run-power-settings.bat - 批处理启动器（推荐使用）
+3. 使用说明.txt - 本文件
+
+功能特点：
+- 设置显示器关闭时间为30分钟
+- 设置计算机睡眠时间为1小时
+- 设置控制台锁定显示关闭超时为5分钟
+- 完全中文化的界面
+- 支持多种运行模式
+- 智能的权限检查和错误处理
+
+使用方法：
+
+方法一：使用批处理文件（推荐）
+1. 双击运行 "run-power-settings.bat"
+2. 或者右键选择"以管理员身份运行"（推荐）
+
+方法二：直接运行 PowerShell 脚本
+1. 右键开始菜单，选择"Windows PowerShell (管理员)"或"终端(管理员)"
+2. 切换到脚本目录：cd "D:\GitHub"
+3. 运行脚本：.\windows-power-settings.ps1
+
+运行模式：
+
+普通模式：
+.\windows-power-settings.ps1
+- 直接应用电源设置（需要管理员权限）
+
+预览模式：
+.\windows-power-settings.ps1 -WhatIf
+- 显示将要进行的更改，但不实际应用
+
+查看模式：
+.\windows-power-settings.ps1 -ShowCurrentSettings
+- 显示当前系统的电源设置
+
+恢复默认模式：
+.\windows-power-settings.ps1 -RestoreDefaults
+- 恢复 Windows 默认电源设置
+
+常见问题及解决方案：
+
+1. 脚本闪退或无法运行：
+   - 确保以管理员身份运行
+   - 检查 PowerShell 执行策略：运行 "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+   - 使用批处理文件启动
+
+2. 提示"需要管理员权限"：
+   - 右键批处理文件，选择"以管理员身份运行"
+   - 或者在 PowerShell 中使用管理员权限
+
+3. 显示乱码：
+   - 批处理文件已设置 UTF-8 支持
+   - 如果仍有问题，请使用 PowerShell 直接运行脚本
+
+注意事项：
+- 修改电源设置需要管理员权限
+- 没有管理员权限时，脚本会自动切换到查看模式
+- 建议在修改前使用 -WhatIf 参数预览更改
+- 更改会立即生效，重启电脑后仍然保留
+
+技术支持：
+如果遇到问题，请检查：
+1. Windows 版本是否为 10 或以上
+2. PowerShell 版本是否为 5.0 或以上
+3. 是否有管理员权限
+4. 脚本文件是否完整
+
+更新日期：2025年9月30日
+
+File Description:
+1. windows-power-settings.ps1 - Main PowerShell script
+2. run-power-settings.bat - Batch launcher (recommended)
+3. User Guide.txt - This file
+
+Features:
+- Set display timeout to 30 minutes
+- Set computer sleep timeout to 1 hour
+- Set console lock display timeout to 5 minutes
+- English interface
+- Multiple operation modes
+- Intelligent permission checking and error handling
+
+Usage:
+
+Method 1: Use batch file (recommended)
+1. Double-click "run-power-settings.bat"
+2. Or right-click and select "Run as administrator" (recommended)
+
+Method 2: Run PowerShell script directly
+1. Right-click Start menu, select "Windows PowerShell (Admin)" or "Terminal (Admin)"
+2. Switch to script directory: cd "D:\GitHub"
+3. Run script: .\windows-power-settings.ps1
+
+Operation Modes:
+
+Normal Mode:
+.\windows-power-settings.ps1
+- Apply power settings directly (requires administrator privileges)
+
+WhatIf Mode:
+.\windows-power-settings.ps1 -WhatIf
+- Show what would be changed, but don't actually apply
+
+View Mode:
+.\windows-power-settings.ps1 -ShowCurrentSettings
+- Display current system power settings
+
+Restore Defaults Mode:
+.\windows-power-settings.ps1 -RestoreDefaults
+- Restore Windows default power settings
+
+Common Issues and Solutions:
+
+1. Script crashes or won't run:
+   - Make sure to run as administrator
+   - Check PowerShell execution policy: Run "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+   - Use batch file to launch
+
+2. "Administrator privileges required" message:
+   - Right-click batch file, select "Run as administrator"
+   - Or use administrator privileges in PowerShell
+
+3. Display garbled characters:
+   - Batch file has UTF-8 support enabled
+   - If still having issues, run script directly in PowerShell
+
+Important Notes:
+- Modifying power settings requires administrator privileges
+- Without administrator privileges, script automatically switches to view mode
+- Recommend using -WhatIf parameter to preview changes before applying
+- Changes take effect immediately and persist after computer restart
+
+Technical Support:
+If you encounter issues, please check:
+1. Windows version is 10 or above
+2. PowerShell version is 5.0 or above
+3. Administrator privileges are available
+4. Script files are complete
+
+Updated: September 30, 2025
+
+File Description:
+1. windows-power-settings-en.ps1 - Main PowerShell script (English, recommended)
+2. windows-power-settings.ps1 - Alternative script (Chinese display, may have encoding issues)
+3. run-power-settings.bat - Batch launcher (recommended)
+4. User Guide.txt - This file
+
+Features:
+- Set display timeout to 30 minutes
+- Set computer sleep timeout to 1 hour
+- Set console lock display timeout to 5 minutes
+- English interface (stable, no encoding issues)
+- Multiple operation modes
+- Intelligent permission checking and error handling
+
+Usage:
+
+Method 1: Use batch file (recommended)
+1. Double-click "run-power-settings.bat"
+2. Or right-click and select "Run as administrator" (recommended)
+
+Method 2: Run PowerShell script directly
+1. Right-click Start menu, select "Windows PowerShell (Admin)" or "Terminal (Admin)"
+2. Switch to script directory: cd "D:\GitHub"
+3. Run script: .\windows-power-settings-en.ps1
+
+Operation Modes:
+
+Normal Mode:
+.\windows-power-settings-en.ps1
+- Apply power settings directly (requires administrator privileges)
+
+WhatIf Mode:
+.\windows-power-settings-en.ps1 -WhatIf
+- Show what would be changed, but don't actually apply
+
+View Mode:
+.\windows-power-settings-en.ps1 -ShowCurrentSettings
+- Display current system power settings
+
+Restore Defaults Mode:
+.\windows-power-settings-en.ps1 -RestoreDefaults
+- Restore Windows default power settings
+
+Common Issues and Solutions:
+
+1. Script crashes or won't run:
+   - Make sure to run as administrator
+   - Check PowerShell execution policy: Run "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+   - Use batch file to launch
+
+2. "Administrator privileges required" message:
+   - Right-click batch file, select "Run as administrator"
+   - Or use administrator privileges in PowerShell
+
+3. Chinese character encoding issues:
+   - Use the English version (windows-power-settings-en.ps1) to avoid encoding problems
+   - The English version is more stable and reliable
+
+Important Notes:
+- Modifying power settings requires administrator privileges
+- Without administrator privileges, script automatically switches to view mode
+- Recommend using -WhatIf parameter to preview changes before applying
+- Changes take effect immediately and persist after computer restart
+- English version is recommended for better compatibility
+
+Technical Support:
+If you encounter issues, please check:
+1. Windows version is 10 or above
+2. PowerShell version is 5.0 or above
+3. Administrator privileges are available
+4. Script files are complete
+5. Try the English version if you experience encoding issues
+
+Updated: September 30, 2025
+Windows 10 Power Settings Configuration Tool - User Guide
+
+File Description:
+1. windows-power-settings-final.ps1 - Main PowerShell script (UTF-8 with BOM, recommended)
+2. windows-power-settings-en.ps1 - Backup English script
+3. windows-power-settings.ps1 - Alternative script (Chinese display)
+4. run-power-settings.bat - Batch launcher (recommended)
+5. User Guide.txt - This file
+
+Features:
+- Set display timeout to 30 minutes
+- Set computer sleep timeout to 1 hour
+- Set console lock display timeout to 5 minutes
+- English interface (stable, no encoding issues)
+- Multiple operation modes
+- Intelligent permission checking and error handling
+- UTF-8 with BOM encoding for proper display
+
+Usage:
+
+Method 1: Use batch file (recommended)
+1. Double-click "run-power-settings.bat"
+2. Or right-click and select "Run as administrator" (recommended)
+
+Method 2: Run PowerShell script directly
+1. Right-click Start menu, select "Windows PowerShell (Admin)" or "Terminal (Admin)"
+2. Switch to script directory: cd "D:\GitHub"
+3. Run script: .\windows-power-settings-final.ps1
+
+Operation Modes:
+
+Normal Mode:
+.\windows-power-settings-final.ps1
+- Apply power settings directly (requires administrator privileges)
+
+WhatIf Mode:
+.\windows-power-settings-final.ps1 -WhatIf
+- Show what would be changed, but don't actually apply
+
+View Mode:
+.\windows-power-settings-final.ps1 -ShowCurrentSettings
+- Display current system power settings
+
+Restore Defaults Mode:
+.\windows-power-settings-final.ps1 -RestoreDefaults
+- Restore Windows default power settings
+
+Common Issues and Solutions:
+
+1. Script crashes or won't run:
+   - Make sure to run as administrator
+   - Check PowerShell execution policy: Run "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+   - Use batch file to launch
+
+2. "Administrator privileges required" message:
+   - Right-click batch file, select "Run as administrator"
+   - Or use administrator privileges in PowerShell
+
+3. Character encoding issues:
+   - Use windows-power-settings-final.ps1 (saved with UTF-8 with BOM encoding)
+   - This version is specifically created to avoid encoding problems
+
+Important Notes:
+- Modifying power settings requires administrator privileges
+- Without administrator privileges, script automatically switches to view mode
+- Recommend using -WhatIf parameter to preview changes before applying
+- Changes take effect immediately and persist after computer restart
+- Final version uses UTF-8 with BOM encoding for best compatibility
+
+Technical Support:
+If you encounter issues, please check:
+1. Windows version is 10 or above
+2. PowerShell version is 5.0 or above
+3. Administrator privileges are available
+4. Script files are complete
+5. Use the final version for best compatibility
+
+Updated: September 30, 2025
+
+File Description:
+1. windows-power-settings-en.ps1 - Main PowerShell script (English, recommended)
+2. windows-power-settings.ps1 - Alternative script (Chinese display, may have encoding issues)
+3. run-power-settings.bat - Batch launcher (recommended)
+4. User Guide.txt - This file
+
+Features:
+- Set display timeout to 30 minutes
+- Set computer sleep timeout to 1 hour
+- Set console lock display timeout to 5 minutes
+- English interface (stable, no encoding issues)
+- Multiple operation modes
+- Intelligent permission checking and error handling
+
+Usage:
+
+Method 1: Use batch file (recommended)
+1. Double-click "run-power-settings.bat"
+2. Or right-click and select "Run as administrator" (recommended)
+
+Method 2: Run PowerShell script directly
+1. Right-click Start menu, select "Windows PowerShell (Admin)" or "Terminal (Admin)"
+2. Switch to script directory: cd "D:\GitHub"
+3. Run script: .\windows-power-settings-en.ps1
+
+Operation Modes:
+
+Normal Mode:
+.\windows-power-settings-en.ps1
+- Apply power settings directly (requires administrator privileges)
+
+WhatIf Mode:
+.\windows-power-settings-en.ps1 -WhatIf
+- Show what would be changed, but don't actually apply
+
+View Mode:
+.\windows-power-settings-en.ps1 -ShowCurrentSettings
+- Display current system power settings
+
+Restore Defaults Mode:
+.\windows-power-settings-en.ps1 -RestoreDefaults
+- Restore Windows default power settings
+
+Common Issues and Solutions:
+
+1. Script crashes or won't run:
+   - Make sure to run as administrator
+   - Check PowerShell execution policy: Run "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+   - Use batch file to launch
+
+2. "Administrator privileges required" message:
+   - Right-click batch file, select "Run as administrator"
+   - Or use administrator privileges in PowerShell
+
+3. Chinese character encoding issues:
+   - Use the English version (windows-power-settings-en.ps1) to avoid encoding problems
+   - The English version is more stable and reliable
+
+Important Notes:
+- Modifying power settings requires administrator privileges
+- Without administrator privileges, script automatically switches to view mode
+- Recommend using -WhatIf parameter to preview changes before applying
+- Changes take effect immediately and persist after computer restart
+- English version is recommended for better compatibility
+
+Technical Support:
+If you encounter issues, please check:
+1. Windows version is 10 or above
+2. PowerShell version is 5.0 or above
+3. Administrator privileges are available
+4. Script files are complete
+5. Try the English version if you experience encoding issues
+
+Updated: September 30, 2025
+
+File Description:
+1. windows-power-settings.ps1 - Main PowerShell script
+2. run-power-settings.bat - Batch launcher (recommended)
+3. User Guide.txt - This file
+
+Features:
+- Set display timeout to 30 minutes
+- Set computer sleep timeout to 1 hour
+- Set console lock display timeout to 5 minutes
+- English interface
+- Multiple operation modes
+- Intelligent permission checking and error handling
+
+Usage:
+
+Method 1: Use batch file (recommended)
+1. Double-click "run-power-settings.bat"
+2. Or right-click and select "Run as administrator" (recommended)
+
+Method 2: Run PowerShell script directly
+1. Right-click Start menu, select "Windows PowerShell (Admin)" or "Terminal (Admin)"
+2. Switch to script directory: cd "D:\GitHub"
+3. Run script: .\windows-power-settings.ps1
+
+Operation Modes:
+
+Normal Mode:
+.\windows-power-settings.ps1
+- Apply power settings directly (requires administrator privileges)
+
+WhatIf Mode:
+.\windows-power-settings.ps1 -WhatIf
+- Show what would be changed, but don't actually apply
+
+View Mode:
+.\windows-power-settings.ps1 -ShowCurrentSettings
+- Display current system power settings
+
+Restore Defaults Mode:
+.\windows-power-settings.ps1 -RestoreDefaults
+- Restore Windows default power settings
+
+Common Issues and Solutions:
+
+1. Script crashes or won't run:
+   - Make sure to run as administrator
+   - Check PowerShell execution policy: Run "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+   - Use batch file to launch
+
+2. "Administrator privileges required" message:
+   - Right-click batch file, select "Run as administrator"
+   - Or use administrator privileges in PowerShell
+
+3. Display garbled characters:
+   - Batch file has UTF-8 support enabled
+   - If still having issues, run script directly in PowerShell
+
+Important Notes:
+- Modifying power settings requires administrator privileges
+- Without administrator privileges, script automatically switches to view mode
+- Recommend using -WhatIf parameter to preview changes before applying
+- Changes take effect immediately and persist after computer restart
+
+Technical Support:
+If you encounter issues, please check:
+1. Windows version is 10 or above
+2. PowerShell version is 5.0 or above
+3. Administrator privileges are available
+4. Script files are complete
+
+Updated: September 30, 2025
+=====================================
+
+文件说明：
+1. windows-power-settings.ps1 - 主 PowerShell 脚本
+2. run-power-settings.bat - 批处理启动器（推荐使用）
+3. 使用说明.txt - 本文件
+
+功能特点：
+- 设置显示器关闭时间为30分钟
+- 设置计算机睡眠时间为1小时
+- 设置控制台锁定显示关闭超时为5分钟
+- 完全中文化的界面
+- 支持多种运行模式
+- 智能的权限检查和错误处理
+
+使用方法：
+
+方法一：使用批处理文件（推荐）
+1. 双击运行 "run-power-settings.bat"
+2. 或者右键选择"以管理员身份运行"（推荐）
+
+方法二：直接运行 PowerShell 脚本
+1. 右键开始菜单，选择"Windows PowerShell (管理员)"或"终端(管理员)"
+2. 切换到脚本目录：cd "D:\GitHub"
+3. 运行脚本：.\windows-power-settings.ps1
+
+运行模式：
+
+普通模式：
+.\windows-power-settings.ps1
+- 直接应用电源设置（需要管理员权限）
+
+预览模式：
+.\windows-power-settings.ps1 -WhatIf
+- 显示将要进行的更改，但不实际应用
+
+查看模式：
+.\windows-power-settings.ps1 -ShowCurrentSettings
+- 显示当前系统的电源设置
+
+恢复默认模式：
+.\windows-power-settings.ps1 -RestoreDefaults
+- 恢复 Windows 默认电源设置
+
+常见问题及解决方案：
+
+1. 脚本闪退或无法运行：
+   - 确保以管理员身份运行
+   - 检查 PowerShell 执行策略：运行 "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+   - 使用批处理文件启动
+
+2. 提示"需要管理员权限"：
+   - 右键批处理文件，选择"以管理员身份运行"
+   - 或者在 PowerShell 中使用管理员权限
+
+3. 显示乱码：
+   - 批处理文件已设置 UTF-8 支持
+   - 如果仍有问题，请使用 PowerShell 直接运行脚本
+
+注意事项：
+- 修改电源设置需要管理员权限
+- 没有管理员权限时，脚本会自动切换到查看模式
+- 建议在修改前使用 -WhatIf 参数预览更改
+- 更改会立即生效，重启电脑后仍然保留
+
+技术支持：
+如果遇到问题，请检查：
+1. Windows 版本是否为 10 或以上
+2. PowerShell 版本是否为 5.0 或以上
+3. 是否有管理员权限
+4. 脚本文件是否完整
+
+更新日期：2025年9月30日
